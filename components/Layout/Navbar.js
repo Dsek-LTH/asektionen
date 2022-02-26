@@ -1,0 +1,42 @@
+import Image from 'next/image';
+import { Stack, Link, Container } from '@mui/material';
+import React from 'react';
+import { styled } from '@mui/system';
+
+const NavLink = styled(Link)`
+  color: white;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 33px;
+  text-decoration: none;
+`;
+
+const Bar = styled(Stack)`
+  min-width: 1400px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const Navbar = () => {
+  return (
+    <Bar
+      direction="row"
+      justifyContent="space-between"
+      alignItems="center"
+      padding={4}
+    >
+      <Image src="/images/logo.png" width={90} height={90} layout="fixed" />
+      <Stack direction="row" spacing={3}>
+        <NavLink>Sökande</NavLink>
+        <NavLink>A-sektionen</NavLink>
+        <NavLink>Student</NavLink>
+        <NavLink>Ashop</NavLink>
+        <NavLink>Näringsliv</NavLink>
+        <NavLink>Kontakt</NavLink>
+      </Stack>
+    </Bar>
+  );
+};
+
+export default Navbar;
