@@ -16,7 +16,7 @@ const theme = createTheme({
     background: {
       default: '#524676',
     },
-    mode: 'dark',
+    mode: 'light',
   },
   typography: {
     fontFamily: 'Noto Sans, sans-serif',
