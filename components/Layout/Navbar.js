@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { Stack, Link, Container } from '@mui/material';
+import Link from 'next/link';
+import { Stack, Link as MuiLink, Container } from '@mui/material';
 import React from 'react';
 import { styled } from '@mui/system';
 
-const NavLink = styled(Link)`
+const NavLink = styled(MuiLink)`
   color: white;
   text-transform: uppercase;
   font-size: 24px;
@@ -26,9 +27,15 @@ const Navbar = () => {
       alignItems="center"
       padding={4}
     >
-      <Image src="/images/logo.png" width={90} height={90} layout="fixed" />
+      <Link href="/" passHref>
+        <NavLink>
+          <Image src="/images/logo.png" width={90} height={90} layout="fixed" />
+        </NavLink>
+      </Link>
       <Stack direction="row" spacing={3}>
-        <NavLink>Sökande</NavLink>
+        <Link href="/utbildningen" passHref>
+          <NavLink>Sökande</NavLink>
+        </Link>
         <NavLink>A-sektionen</NavLink>
         <NavLink>Student</NavLink>
         <NavLink>Ashop</NavLink>

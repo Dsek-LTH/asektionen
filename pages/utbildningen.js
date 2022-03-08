@@ -1,65 +1,28 @@
-import { Container, Paper, Stack, Typography } from "@mui/material";
-import { Box, styled } from "@mui/system";
-import Image from "next/image";
+import { Container, Paper, Stack, Typography } from '@mui/material';
+import { Box, styled } from '@mui/system';
+import Image from 'next/image';
+import { COLORS } from '../src/colors';
 
 const StyledPaper = styled(Paper)`
   display: flex;
   align-items: center;
   width: 100%;
-  text-align: right;
   flex-direction: column;
   max-width: 1350px;
   border-radius: 135px;
-  height: 1640px;
+  padding: 32px;
+  margin: 32px;
 `;
 
-const StyledText = styled(Container)`
-  position: absolute;
-  text-align: left;
-  width: 747px;
-  height: 324px;
-  left: 554px;
-  top: 350px;
-`;
+const StyledText = styled(Box)``;
 
-const StyledPicture = styled(Container)`
-  position: absolute;
-  width: 346px;
-  height: 317px;
-  left: 165px;
-  top: 412px;
-`;
+const StyledPicture = styled(Box)``;
 
-const StyledText2 = styled(Container)`
-  position: absolute;
-  text-align: left;
-  width: 747px;
-  height: 324px;
-  left: 122px;
-  top: 1100px;
-`;
+const StyledText2 = styled(Box)``;
 
-const StyledPicture1 = styled(Container)`
-  position: absolute;
-  width: 346px;
-  height: 405px;
-  left: 165px;
-  top: 778px;
-`;
-const StyledPicture2 = styled(Container)`
-  position: absolute;
-  width: 346px;
-  height: 350px;
-  left: 800px;
-  top: 10px;
-`;
-const StyledPicture3 = styled(Container)`
-  position: absolute;
-  width: 346px;
-  height: 307px;
-  left: 800px;
-  top: 300px;
-`;
+const StyledPicture1 = styled(Box)``;
+const StyledPicture2 = styled(Box)``;
+const StyledPicture3 = styled(Box)``;
 
 export default function UtbildningenPage() {
   return (
@@ -67,82 +30,86 @@ export default function UtbildningenPage() {
       <StyledPaper>
         <Typography
           variant="h1"
-          fontSize="30px"
+          fontSize={96}
           fontWeight="bold"
-          allign="center"
+          align="center"
+          color={COLORS.MAIN}
         >
           UTBILDNINGEN
         </Typography>
 
-        <StyledText>
-          <Typography variant="h1" fontSize="30px" fontWeight="bold">
-            ARKITEKTUR
-          </Typography>
-          <Typography fontSize="15px" fontWeight="bold" allign="right">
-            På arkitektutbildningen lär vi oss att gestalta, förmedla och
-            reflektera kring arkitektur. Centralt under utbildningen är arbetet
-            i ateljén. Det är där den mest av skoltiden tillbringas och utrymmet
-            för utbyte mellan oss studenter inom skolans ramar blir som störst.
-            Under de två första åren på utbildningen delas ateljéerna över
-            årskullarna, så att ettor arbetar jämte och tillsammans med tvåor
-            och vice versa. Arbetet sker delvis individuellt och delvis i grupp.
-            Detta gäller såväl för övergripande gestaltningskurser vilka äger
-            rum till största del i den egna ateljén, som för kurser i teori- och
-            historia, teknik och digitala verktyg. Utöver ateljéer har vi även
-            generös tillgång till delade datorsalar, gemensamma verkstäder och
-            ett eget bibliotek.
-            <br></br>
-            <br></br> Kärnan i undervisningen är att lära sig gestalta och
-            förstå sig på byggnader, städer och rum. Framställningsformerna
-            skiftar mellan skisser, modeller och ritningar, och texter,
-            planscher och prototyper i skala 1:1. Skalan varierar mellan möbeln,
-            det enskilda rummet och den byggda miljön i stort. Den rör sig
-            mellan bostaden till stadens sammanhang och förutsättningarna för
-            våra samhällen. Som en del av utbildningen ingår valbara studieresor
-            till både när och fjärran, som finns till som ett sätt för oss att
-            bekanta oss med arkitekturkontexter som skiljer sig från vår egen.
-            Eftersom arkitektur växer fram utifrån plats, kultur, klimat och
-            historia utgör detta en viktig del av utbildningen.
-            <br></br>
-            <br></br>I takt med utbildningens gång växer den individuella
-            friheten att utforma den egna utbildningen efter
-            fördjupningsintresse och utvecklingslust. Vidare tränas vi genom
-            utbildningen i att utveckla våra egna uttryckssätt och att kritiskt
-            förhålla oss till den byggda miljön i dess specifika ekonomiska,
-            politiska och religiösa sammanhang. Likaså odlar vi genomgående vår
-            förmåga i kommunikation och mottagande av konstruktiv kritik genom
-            presentationer för olika personer som är yrkesverksamma inom det
-            vida arbetsfält som kan rubriceras som branschen arkitektur. Ett mål
-            med utbildningen är att vi efterhand ska lära oss att ta oss an
-            framtidens samhällsutmaningar ifråga om den byggda miljön, och under
-            lärandevägen bildar vi kontakter, gemenskaper och vänskapsband för
-            livet.
-          </Typography>
-        </StyledText>
-
-        <StyledPicture>
-          <img
-            src="/images/Trollface_non-free.png"
-            layout="fill"
-            allign="left"
-            width="300"
-            height="300"
-          />
-        </StyledPicture>
-
-        <StyledPicture1>
-          <img
-            src="/images/Trollface_non-free.png"
-            layout="fill"
-            allign="left"
-            width="300"
-            height="300"
-          />
-        </StyledPicture1>
-
+        <Stack direction="row" spacing="64px" marginTop="64px">
+          <Stack>
+            <StyledPicture>
+              <img
+                src="/images/Trollface_non-free.png"
+                layout="fill"
+                allign="left"
+                width="300"
+                height="300"
+              />
+            </StyledPicture>
+            <StyledPicture1>
+              <img
+                src="/images/Trollface_non-free.png"
+                layout="fill"
+                allign="left"
+                width="300"
+                height="300"
+              />
+            </StyledPicture1>
+          </Stack>
+          <Stack>
+            <Typography variant="h1" fontSize="30px" fontWeight="bold">
+              ARKITEKTUR
+            </Typography>
+            <Typography fontSize="15px" fontWeight="bold" allign="right">
+              På arkitektutbildningen lär vi oss att gestalta, förmedla och
+              reflektera kring arkitektur. Centralt under utbildningen är
+              arbetet i ateljén. Det är där den mest av skoltiden tillbringas
+              och utrymmet för utbyte mellan oss studenter inom skolans ramar
+              blir som störst. Under de två första åren på utbildningen delas
+              ateljéerna över årskullarna, så att ettor arbetar jämte och
+              tillsammans med tvåor och vice versa. Arbetet sker delvis
+              individuellt och delvis i grupp. Detta gäller såväl för
+              övergripande gestaltningskurser vilka äger rum till största del i
+              den egna ateljén, som för kurser i teori- och historia, teknik och
+              digitala verktyg. Utöver ateljéer har vi även generös tillgång
+              till delade datorsalar, gemensamma verkstäder och ett eget
+              bibliotek.
+              <br></br>
+              <br></br> Kärnan i undervisningen är att lära sig gestalta och
+              förstå sig på byggnader, städer och rum. Framställningsformerna
+              skiftar mellan skisser, modeller och ritningar, och texter,
+              planscher och prototyper i skala 1:1. Skalan varierar mellan
+              möbeln, det enskilda rummet och den byggda miljön i stort. Den rör
+              sig mellan bostaden till stadens sammanhang och förutsättningarna
+              för våra samhällen. Som en del av utbildningen ingår valbara
+              studieresor till både när och fjärran, som finns till som ett sätt
+              för oss att bekanta oss med arkitekturkontexter som skiljer sig
+              från vår egen. Eftersom arkitektur växer fram utifrån plats,
+              kultur, klimat och historia utgör detta en viktig del av
+              utbildningen.
+              <br></br>
+              <br></br>I takt med utbildningens gång växer den individuella
+              friheten att utforma den egna utbildningen efter
+              fördjupningsintresse och utvecklingslust. Vidare tränas vi genom
+              utbildningen i att utveckla våra egna uttryckssätt och att
+              kritiskt förhålla oss till den byggda miljön i dess specifika
+              ekonomiska, politiska och religiösa sammanhang. Likaså odlar vi
+              genomgående vår förmåga i kommunikation och mottagande av
+              konstruktiv kritik genom presentationer för olika personer som är
+              yrkesverksamma inom det vida arbetsfält som kan rubriceras som
+              branschen arkitektur. Ett mål med utbildningen är att vi efterhand
+              ska lära oss att ta oss an framtidens samhällsutmaningar ifråga om
+              den byggda miljön, och under lärandevägen bildar vi kontakter,
+              gemenskaper och vänskapsband för livet.
+            </Typography>
+          </Stack>
+        </Stack>
         <StyledText2>
           <Typography variant="h1" fontSize="30px" fontWeight="bold">
-            INDUSTRIDESIGN{" "}
+            INDUSTRIDESIGN{' '}
           </Typography>
           <Typography fontSize="15px" fontWeight="bold" allign="right">
             På Industridesign lär vi oss att gå från en problemställning eller

@@ -22,6 +22,7 @@ const TitleCard = styled(Stack)`
 `;
 
 const Title = styled(Typography)`
+  color: white;
   font-style: normal;
   font-weight: bold;
   text-align: center;
@@ -29,6 +30,7 @@ const Title = styled(Typography)`
 `;
 
 const Subtitle = styled(Typography)`
+  color: white;
   font-style: normal;
   font-weight: bold;
   text-align: center;
