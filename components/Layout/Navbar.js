@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Stack, Link as MuiLink, Container } from '@mui/material';
-import React from 'react';
-import { styled } from '@mui/system';
+import Image from "next/image";
+import Link from "next/link";
+import { Stack, Link as MuiLink, Container } from "@mui/material";
+import React from "react";
+import { styled } from "@mui/system";
 
 const NavLink = styled(MuiLink)`
   color: white;
@@ -18,6 +18,7 @@ const Bar = styled(Stack)`
   margin-left: auto;
   margin-right: auto;
 `;
+const LinkTest = styled(Link)``;
 
 const Navbar = () => {
   return (
@@ -36,8 +37,11 @@ const Navbar = () => {
         <Link href="/utbildningen" passHref>
           <NavLink>Sökande</NavLink>
         </Link>
-        <NavLink>A-sektionen</NavLink>
-        <NavLink>Student</NavLink>
+
+        <Link href="/" passHref>
+          <NavLink>Student</NavLink>
+        </Link>
+
         <NavLink>Ashop</NavLink>
         <NavLink>Näringsliv</NavLink>
         <NavLink>Kontakt</NavLink>

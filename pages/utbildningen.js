@@ -1,7 +1,7 @@
-import { Container, Paper, Stack, Typography } from '@mui/material';
-import { Box, styled } from '@mui/system';
-import Image from 'next/image';
-import { COLORS } from '../src/colors';
+import { Container, Paper, Stack, Typography } from "@mui/material";
+import { Box, styled } from "@mui/system";
+import Image from "next/image";
+import { COLORS } from "../src/colors";
 
 const StyledPaper = styled(Paper)`
   display: flex;
@@ -14,11 +14,11 @@ const StyledPaper = styled(Paper)`
   margin: 32px;
 `;
 
-const StyledText = styled(Box)``;
-
 const StyledPicture = styled(Box)``;
 
-const StyledText2 = styled(Box)``;
+const StyledText2 = styled(Box)`
+  margin-right: 84px;
+`;
 
 const StyledPicture1 = styled(Box)``;
 const StyledPicture2 = styled(Box)``;
@@ -34,11 +34,11 @@ export default function UtbildningenPage() {
           fontWeight="bold"
           align="center"
           color={COLORS.MAIN}
+          marginBottom="64px"
         >
           UTBILDNINGEN
         </Typography>
-
-        <Stack direction="row" spacing="64px" marginTop="64px">
+        <Stack direction="row" spacing="64px" marginTop="64px" margin="16px">
           <Stack>
             <StyledPicture>
               <img
@@ -60,10 +60,15 @@ export default function UtbildningenPage() {
             </StyledPicture1>
           </Stack>
           <Stack>
-            <Typography variant="h1" fontSize="30px" fontWeight="bold">
+            <Typography
+              variant="h1"
+              fontSize="30px"
+              fontWeight="bold"
+              marginBottom="32px"
+            >
               ARKITEKTUR
             </Typography>
-            <Typography fontSize="15px" fontWeight="bold" allign="right">
+            <Typography fontSize="15px" font="Noto Sans" allign="right">
               På arkitektutbildningen lär vi oss att gestalta, förmedla och
               reflektera kring arkitektur. Centralt under utbildningen är
               arbetet i ateljén. Det är där den mest av skoltiden tillbringas
@@ -107,48 +112,58 @@ export default function UtbildningenPage() {
             </Typography>
           </Stack>
         </Stack>
-        <StyledText2>
-          <Typography variant="h1" fontSize="30px" fontWeight="bold">
-            INDUSTRIDESIGN{' '}
-          </Typography>
-          <Typography fontSize="15px" fontWeight="bold" allign="right">
-            På Industridesign lär vi oss att gå från en problemställning eller
-            idé till lösning och färdig produkt. En väg som kan vara lång och
-            varierad vilket kräver en stor bredd av verktyg. Vitränas bland
-            annat i att skissa analogt och digitalt, tillverka prototyper i
-            verkstaden och 3D-modellera för att bättre förmedla våra
-            idéer.[/bsf-info-box][bsf-info-box icon_size=”32″]En ständigt
-            återkommande mening på industridesign är ”form follows function”.
-            Uttrycket innebär att produktens form är en direkt konsekvens av
-            dess användning och sammanhang. Därav blir det nödvändigt för oss
-            blivande designers att kunna sätta oss in i och förstå nya
-            sammanhang och användare. Därför utvecklar vi förmågan att arbeta
-            gränsöverskridande, ta oss an nya vetenskapsområden och inte
-            skrämmas av det okända.
-            <br></br>
-            <br></br>
-            Det kan röra sig om ergonomi när man tillverkar ett förarsäte i en
-            bil, livsmedelshantering när det gäller förpackningar, eller
-            utvecklingspsykologi när det kommer till lekplatsdesign. Samma
-            gäller för val av material och tillverkning; vi måste hela tiden
-            göra val som grundar sig i estetiska, tekniska, industriella,
-            ekonomiska, etiska och hållbara beslut. Valen kräver bred kunskap
-            och det hjälper att vara nyfikenhet av sig! Vidare tränas vi i att
-            dokumentera, presentera och diskutera det vi gör; ta emot och ge
-            konstruktiv kritik. Vi arbetar enskilt, i grupp, med handledning av
-            lärare och i kontakt med utomstående aktörer; tekniskt och
-            konstnärligt. Med tiden blir höger och vänster hjärnhalva bästa
-            vänner.[/bsf-info-box][bsf-info-box icon_size=”32″]”Kilen” som är
-            ytan där vi har våra ritsalar, kaffe-, lunch- och pratstunder är en
-            perfekt plats för att inspireras, brainstormaoch ta hjälp av
-            varandra. Mängden utbytesstudenter och internationella lärare gör
-            att erfarenhetsutbytet blir ännu större och arbetsplatsen mer
-            spännande och verklighetsanknuten.
+
+        <Stack direction="row" spacing="64px" marginTop="64px" margin="16px">
+          <StyledText2>
+            <Typography
+              variant="h1"
+              fontSize="30px"
+              fontWeight="bold"
+              marginBottom="30px"
+            >
+              INDUSTRIDESIGN{" "}
+            </Typography>
+            <Typography fontSize="13px" font="Noto Sans" allign="left">
+              På Industridesign lär vi oss att gå från en problemställning eller
+              idé till lösning och färdig produkt. En väg som kan vara lång och
+              varierad vilket kräver en stor bredd av verktyg. Vitränas bland
+              annat i att skissa analogt och digitalt, tillverka prototyper i
+              verkstaden och 3D-modellera för att bättre förmedla våra
+              idéer.[/bsf-info-box][bsf-info-box icon_size=”32″]En ständigt
+              återkommande mening på industridesign är ”form follows function”.
+              Uttrycket innebär att produktens form är en direkt konsekvens av
+              dess användning och sammanhang. Därav blir det nödvändigt för oss
+              blivande designers att kunna sätta oss in i och förstå nya
+              sammanhang och användare. Därför utvecklar vi förmågan att arbeta
+              gränsöverskridande, ta oss an nya vetenskapsområden och inte
+              skrämmas av det okända.
+              <br></br>
+              <br></br>
+              Det kan röra sig om ergonomi när man tillverkar ett förarsäte i en
+              bil, livsmedelshantering när det gäller förpackningar, eller
+              utvecklingspsykologi när det kommer till lekplatsdesign. Samma
+              gäller för val av material och tillverkning; vi måste hela tiden
+              göra val som grundar sig i estetiska, tekniska, industriella,
+              ekonomiska, etiska och hållbara beslut. Valen kräver bred kunskap
+              och det hjälper att vara nyfikenhet av sig! Vidare tränas vi i att
+              dokumentera, presentera och diskutera det vi gör; ta emot och ge
+              konstruktiv kritik. Vi arbetar enskilt, i grupp, med handledning
+              av lärare och i kontakt med utomstående aktörer; tekniskt och
+              konstnärligt. Med tiden blir höger och vänster hjärnhalva bästa
+              vänner.[/bsf-info-box][bsf-info-box icon_size=”32″]”Kilen” som är
+              ytan där vi har våra ritsalar, kaffe-, lunch- och pratstunder är
+              en perfekt plats för att inspireras, brainstormaoch ta hjälp av
+              varandra. Mängden utbytesstudenter och internationella lärare gör
+              att erfarenhetsutbytet blir ännu större och arbetsplatsen mer
+              spännande och verklighetsanknuten.
+            </Typography>
+          </StyledText2>
+          <Stack marginleft="30pxs">
             <StyledPicture2>
               <img
                 src="/images/Trollface_non-free.png"
                 layout="fill"
-                allign="left"
+                allign="right"
                 width="350"
                 height="300"
               />
@@ -157,13 +172,13 @@ export default function UtbildningenPage() {
               <img
                 src="/images/Trollface_non-free.png"
                 layout="fill"
-                allign="left"
+                allign="right"
                 width="350"
                 height="220"
               />
             </StyledPicture3>
-          </Typography>
-        </StyledText2>
+          </Stack>
+        </Stack>
       </StyledPaper>
     </Stack>
   );
