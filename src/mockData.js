@@ -78,7 +78,7 @@ const BOARD_MEMBERS = [
   },
   {
     id: 11,
-    name: 'Matilda Ingvast Wennerströn',
+    name: 'Matilda Ingvast Wennerström',
     title: 'Överphös',
     email: 'ordforande@asektionen.se',
     image: '',
