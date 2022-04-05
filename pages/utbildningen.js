@@ -12,6 +12,10 @@ const StyledPaper = styled(Paper)`
   border-radius: 135px;
   padding: 32px;
   margin: 32px;
+  img {
+    margin-bottom: 32px;
+  }
+  padding-bottom: 122px;
 `;
 
 const StyledPicture = styled(Box)``;
@@ -42,7 +46,7 @@ export default function UtbildningenPage() {
           <Stack>
             <StyledPicture>
               <img
-                src="/images/Trollface_non-free.png"
+                src="/images/Rectangle49.png"
                 layout="fill"
                 allign="left"
                 width="300"
@@ -51,7 +55,7 @@ export default function UtbildningenPage() {
             </StyledPicture>
             <StyledPicture1>
               <img
-                src="/images/Trollface_non-free.png"
+                src="/images/Rectangle49.png"
                 layout="fill"
                 allign="left"
                 width="300"
@@ -161,7 +165,7 @@ export default function UtbildningenPage() {
           <Stack marginleft="30pxs">
             <StyledPicture2>
               <img
-                src="/images/Trollface_non-free.png"
+                src="/images/Rectangle49.png"
                 layout="fill"
                 allign="right"
                 width="350"
@@ -170,7 +174,7 @@ export default function UtbildningenPage() {
             </StyledPicture2>
             <StyledPicture3>
               <img
-                src="/images/Trollface_non-free.png"
+                src="/images/Rectangle49.png"
                 layout="fill"
                 allign="right"
                 width="350"
