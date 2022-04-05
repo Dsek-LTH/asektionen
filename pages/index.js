@@ -1,13 +1,14 @@
-import { Stack, Typography } from '@mui/material';
+import { Stack, Typography, Paper } from '@mui/material';
 import { Box, styled } from '@mui/system';
 import Image from 'next/image';
 import Business from '../components/VectorGraphics/Business';
 import Searching from '../components/VectorGraphics/Searching';
 import Studying from '../components/VectorGraphics/Studying';
+import { NEWS } from '../src/mockData';
 
 const BackgroundImageContainer = styled(Box)`
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 0;
   top: 160px;
   right: 0;
@@ -17,16 +18,10 @@ const BackgroundImageContainer = styled(Box)`
 `;
 
 const TitleCard = styled(Stack)`
+  display: flex;
+  align-items: center;
   position: absolute;
   width: 100%;
-`;
-
-const Title = styled(Typography)`
-  color: white;
-  font-style: normal;
-  font-weight: bold;
-  text-align: center;
-  font-size: 96px;
 `;
 
 const Subtitle = styled(Typography)`
@@ -34,15 +29,15 @@ const Subtitle = styled(Typography)`
   font-style: normal;
   font-weight: bold;
   text-align: center;
-  font-size: 44px;
+  font-size: 64px;
   line-height: 130%;
+  max-width: 1000px;
 `;
 
 const ContentStack = styled(Stack)`
-  background-color: #f3f3f3;
   min-height: 300px;
-  margin-top: calc(100vh - 155px);
-  color: black;
+  color: white;
+  margin-top: calc(100vh - 50px);
 `;
 
 const InformationStack = styled(Stack)`
@@ -51,7 +46,10 @@ const InformationStack = styled(Stack)`
   max-width: 21rem;
 `;
 
-const Divider = styled(Box)``;
+const Divider = styled(Box)`
+  border: 2px solid #ffffff;
+  width: 100%;
+`;
 
 export default function Index() {
   return (
@@ -59,7 +57,13 @@ export default function Index() {
       <BackgroundImageContainer>
         <Image src="/images/background.jpg" layout="fill" />
         <TitleCard marginTop={15}>
-          <Title>A-SEKTIONEN</Title>
+          <Image
+            src="/images/logo.png"
+            width={391}
+            height={391}
+            layout="fixed"
+          />
+          <Subtitle>SEKTIONEN FÖR ARKITEKTUR OCH INDUSTRIDESIGN</Subtitle>
           <Subtitle>LUNDS TEKNISKA HÖGSKOLA</Subtitle>
         </TitleCard>
       </BackgroundImageContainer>
@@ -91,6 +95,50 @@ export default function Index() {
           </InformationStack>
         </Stack>
         <Divider />
+        <Stack direction="row" spacing={10}>
+          <Paper
+            style={{ borderRadius: '40px', padding: '2rem', paddingBottom: 0 }}
+          >
+            <Typography fontWeight={800} fontSize={36} color="background">
+              Aktuellt
+            </Typography>
+            <Stack
+              maxHeight="20rem"
+              maxWidth="42rem"
+              style={{ overflowY: 'scroll' }}
+            >
+              {NEWS.map((newsItem) => (
+                <Stack>
+                  <Stack padding="1rem 0">
+                    <Typography fontSize={24}>{newsItem.title}</Typography>
+                    <Typography fontSize={18}>{newsItem.teaser}</Typography>
+                  </Stack>
+                  <Box style={{ border: '2px solid #29233B' }} />
+                </Stack>
+              ))}
+            </Stack>
+          </Paper>
+          <Paper style={{ borderRadius: '40px', padding: '2rem' }}>
+            <Typography fontWeight={800} fontSize={36} color="background">
+              Kalendar
+            </Typography>
+            <Stack
+              maxHeight="20rem"
+              maxWidth="27rem"
+              style={{ overflowY: 'scroll' }}
+            >
+              {NEWS.map((newsItem) => (
+                <Stack>
+                  <Stack padding="1rem 0">
+                    <Typography fontSize={24}>{newsItem.title}</Typography>
+                    <Typography fontSize={18}>{newsItem.teaser}</Typography>
+                  </Stack>
+                  <Box style={{ border: '2px solid #29233B' }} />
+                </Stack>
+              ))}
+            </Stack>
+          </Paper>
+        </Stack>
         <Typography fontSize={24} textAlign="center" maxWidth="70rem">
           Sektionen för Arkitektur och Industridesign, A-sektionen, är en ideell
           förening och har som ändamål att verka för sammanhållning och god

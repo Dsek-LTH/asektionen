@@ -20,7 +20,7 @@ const theme = createTheme({
     mode: 'light',
   },
   typography: {
-    fontFamily: 'Noto Sans, sans-serif',
+    fontFamily: "'Noto Sans', sans-serif",
   },
 });
 

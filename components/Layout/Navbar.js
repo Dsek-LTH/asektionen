@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Stack, Link as MuiLink, Container } from "@mui/material";
-import React from "react";
-import { styled } from "@mui/system";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Stack, Link as MuiLink, Container } from '@mui/material';
+import React from 'react';
+import { styled } from '@mui/system';
 
 const NavLink = styled(MuiLink)`
   color: white;
@@ -30,7 +30,12 @@ const Navbar = () => {
     >
       <Link href="/" passHref>
         <NavLink>
-          <Image src="/images/logo.png" width={90} height={90} layout="fixed" />
+          <Image
+            src="/images/logo-minimal.png"
+            width={62}
+            height={54}
+            layout="fixed"
+          />
         </NavLink>
       </Link>
       <Stack direction="row" spacing={3}>
