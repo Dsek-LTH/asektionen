@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Stack, Link as MuiLink, Container } from "@mui/material";
 import React from "react";
 import { styled } from "@mui/system";
+import MenuButton from "./MenuButton";
 
 const NavLink = styled(MuiLink)`
   color: white;
@@ -45,6 +46,7 @@ const Navbar = () => {
         <NavLink>Ashop</NavLink>
         <NavLink>Näringsliv</NavLink>
         <NavLink>Kontakt</NavLink>
+        <MenuButton name="hallå" ></MenuButton>
       </Stack>
     </Bar>
   );

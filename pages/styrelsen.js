@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Paper, Stack, Typography } from '@mui/material';
 import { Box, styled, flexbox } from '@mui/system';
 import { COLORS } from '../src/colors';
-import BOARD_MEMBERS from '../src/mockData';
+import BOARD_MEMBERS from '../src/mockData/boardMemberMock';
 import BoardMember from '../components/BoardMember';
 
  const BackgroundPaper = styled(Paper)`
