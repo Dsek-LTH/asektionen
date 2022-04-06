@@ -36,8 +36,7 @@ const Navbar = () => {
         </NavLink>
       </Link>
       <Stack direction="row" spacing={3}>
-        {MENU.map((item) => <MenuButton name={item.title} links={item.links}></MenuButton>)}
-        
+        {MENU.map((item) => <MenuButton name={item.title} path={item.path} links={item.links}></MenuButton>)}
       </Stack>
     </Bar>
   );

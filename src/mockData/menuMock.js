@@ -1,6 +1,7 @@
 const MENU = [
   {
     title: 'A-sektionen',
+    path: '/a-sektionen',
     links: [
       {
         title: 'Styrelsen',
@@ -30,6 +31,7 @@ const MENU = [
   },
   {
     title: 'Sökande',
+    path: '/sokande',
     links: [
       {
         title: 'Nollning',
@@ -55,6 +57,7 @@ const MENU = [
   },
   {
     title: 'Medlemmar',
+    path: '/medlemmar',
     links: [
       {
         title: 'Aktuellt',
@@ -84,14 +87,17 @@ const MENU = [
   },
   {
     title: 'Näringsliv',
+    path: '/naringsliv',
     links:  []
   },
   {
     title: 'A-shop',
+    path: '/a-shop',
     links: []
   },
   {
     title: 'Kontakt',
+    path: '/kontakt',
     links: []
   },
 ];

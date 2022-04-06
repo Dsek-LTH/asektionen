@@ -5,6 +5,7 @@ import { MenuItem } from '@mui/material'
 import { useState } from 'react'
 import styled from '@emotion/styled'
 import theme from '../../src/theme'
+import Link from 'next/link'
 
 import HoverMenu from 'material-ui-popup-state/HoverMenu'
 import {
@@ -13,7 +14,7 @@ import {
   bindMenu,
 } from 'material-ui-popup-state/hooks'
 
-const MenuButton = ({ name, links }) => {
+const MenuButton = ({ name, path, links }) => {
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -33,25 +34,32 @@ const MenuButton = ({ name, links }) => {
     popupId: 'demoMenu',
   })
 
+  const StyledButton = styled(Button)`
+
+  `
+
   return (
     <>
-      <Button
-        /* id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        onMouseOver={handleClick} */
-        variant="text"
-        {...bindHover(popupState)}
-        style={{
-          fontFamily: 'Noto Sans', 
-          fontSize: 24, color: 'white', 
-          backgroundColor: 'transparent'
-        }}
-      >
-        {name}
-      </Button>
+      <Link href={path}>
+        <Button
+          /* id="basic-button"
+          aria-controls={open ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+          onMouseOver={handleClick} */
+          variant="text"
+          
+          {...bindHover(popupState)}
+          style={{
+            fontFamily: 'Noto Sans', 
+            fontSize: 24, color: 'white',
+          }}
+        >
+          {name}
+        </Button>
+      </Link>
+      
       {links.length !== 0 &&
       /* <Menu
         id="basic-menu"
@@ -71,15 +79,16 @@ const MenuButton = ({ name, links }) => {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
         transformOrigin={{ vertical: 'top', horizontal: 'left' }}
         disableScrollLock={true}
-        style={{
-          
-        }}
       >
-        {links.map((link) => <MenuItem onClick={popupState.close}>{link.title}</MenuItem>)}
+        {links.map((link) => {
+          return(
+            <Link href={link.path}>
+              <MenuItem onClick={popupState.close}>{link.title}</MenuItem>
+            </Link>)
+        })}
+      
       </HoverMenu>
-      }
-      
-      
+}
     </>
   );
 }
