@@ -3,30 +3,57 @@ import { Button } from '@mui/material'
 import { Menu } from '@mui/material'
 import { MenuItem } from '@mui/material'
 import { useState } from 'react'
+import styled from '@emotion/styled'
+import theme from '../../src/theme'
 
-const MenuButton = ({ name }) => {
+import HoverMenu from 'material-ui-popup-state/HoverMenu'
+import {
+  usePopupState,
+  bindHover,
+  bindMenu,
+} from 'material-ui-popup-state/hooks'
+
+const MenuButton = ({ name, links }) => {
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    if (anchorEl !== event.currentTarget) {
+      setAnchorEl(event.currentTarget);
+    }
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  const popupState = usePopupState({
+    variant: 'popover',
+    popupId: 'demoMenu',
+  })
+
   return (
-    <div>
+    <>
       <Button
-        id="basic-button"
+        /* id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        onMouseOver={handleClick} */
+        variant="text"
+        {...bindHover(popupState)}
+        style={{
+          fontFamily: 'Noto Sans', 
+          fontSize: 24, color: 'white', 
+          backgroundColor: 'transparent'
+        }}
       >
         {name}
       </Button>
-      <Menu
+      {links.length !== 0 &&
+      /* <Menu
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
@@ -34,13 +61,26 @@ const MenuButton = ({ name }) => {
         disableScrollLock={true}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
+          onMouseLeave: handleClose
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
-    </div>
+        {links.map((link) => <MenuItem onClick={handleClose}>{link.title}</MenuItem>)}
+      </Menu> */
+      <HoverMenu 
+        {...bindMenu(popupState)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+        disableScrollLock={true}
+        style={{
+          
+        }}
+      >
+        {links.map((link) => <MenuItem onClick={popupState.close}>{link.title}</MenuItem>)}
+      </HoverMenu>
+      }
+      
+      
+    </>
   );
 }
 

@@ -84,15 +84,15 @@ const MENU = [
   },
   {
     title: 'Näringsliv',
-    link: []
+    links:  []
   },
   {
     title: 'A-shop',
-    link: []
+    links: []
   },
   {
     title: 'Kontakt',
-    link: []
+    links: []
   },
 ];
 
