@@ -32,7 +32,12 @@ const Navbar = () => {
     >
       <Link href="/" passHref>
         <NavLink>
-          <Image src="/images/logo.png" width={90} height={90} layout="fixed" />
+          <Image
+            src="/images/logo-minimal.png"
+            width={62}
+            height={54}
+            layout="fixed"
+          />
         </NavLink>
       </Link>
       <Stack direction="row" spacing={3}>

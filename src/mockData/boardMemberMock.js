@@ -1,4 +1,4 @@
-const BOARD_MEMBERS = [
+export const BOARD_MEMBERS = [
   {
     id: 0,
     name: 'Elvira Stålhammar',
@@ -106,4 +106,59 @@ const BOARD_MEMBERS = [
   },
 ];
 
-export default BOARD_MEMBERS
+export const NEWS = [
+  {
+    title: 'Vakanta Poster',
+    teaser:
+      'A-sektionen söker just nu en kassör. Är du en fena på excel? Maila ordforande@asektionen.se idag!',
+  },
+  {
+    title: 'En till nyhet',
+    teaser: 'Glöm inte bort detta viktiga!',
+  },
+  {
+    title: 'Vakanta Poster',
+    teaser:
+      'A-sektionen söker just nu en kassör. Är du en fena på excel? Maila ordforande@asektionen.se idag!',
+  },
+  {
+    title: 'En till nyhet',
+    teaser: 'Glöm inte bort detta viktiga!',
+  },
+  {
+    title: 'Vakanta Poster',
+    teaser:
+      'A-sektionen söker just nu en kassör. Är du en fena på excel? Maila ordforande@asektionen.se idag!',
+  },
+  {
+    title: 'En till nyhet',
+    teaser: 'Glöm inte bort detta viktiga!',
+  },
+  {
+    title: 'Vakanta Poster',
+    teaser:
+      'A-sektionen söker just nu en kassör. Är du en fena på excel? Maila ordforande@asektionen.se idag!',
+  },
+  {
+    title: 'En till nyhet',
+    teaser: 'Glöm inte bort detta viktiga!',
+  },
+  {
+    title: 'Vakanta Poster',
+    teaser:
+      'A-sektionen söker just nu en kassör. Är du en fena på excel? Maila ordforande@asektionen.se idag!',
+  },
+  {
+    title: 'En till nyhet',
+    teaser: 'Glöm inte bort detta viktiga!',
+  },
+  {
+    title: 'Vakanta Poster',
+    teaser:
+      'A-sektionen söker just nu en kassör. Är du en fena på excel? Maila ordforande@asektionen.se idag!',
+  },
+  {
+    title: 'En till nyhet',
+    teaser: 'Glöm inte bort detta viktiga!',
+  },
+];
