@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Business from '../components/VectorGraphics/Business';
 import Searching from '../components/VectorGraphics/Searching';
 import Studying from '../components/VectorGraphics/Studying';
-import { NEWS } from '../src/mockData';
+import { NEWS } from '../src/mockData/mockData';
 
 const BackgroundImageContainer = styled(Box)`
   position: absolute;

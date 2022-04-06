@@ -1,8 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Stack, Link as MuiLink, Container } from '@mui/material';
-import React from 'react';
-import { styled } from '@mui/system';
+import Image from "next/image";
+import Link from "next/link";
+import { Stack, Link as MuiLink, Container } from "@mui/material";
+import React from "react";
+import { styled } from "@mui/system";
+import MenuButton from "./MenuButton";
+import MENU from "../../src/mockData/menuMock";
 
 const NavLink = styled(MuiLink)`
   color: white;
@@ -39,17 +41,7 @@ const Navbar = () => {
         </NavLink>
       </Link>
       <Stack direction="row" spacing={3}>
-        <Link href="/utbildningen" passHref>
-          <NavLink>Sökande</NavLink>
-        </Link>
-
-        <Link href="/" passHref>
-          <NavLink>Student</NavLink>
-        </Link>
-
-        <NavLink>Ashop</NavLink>
-        <NavLink>Näringsliv</NavLink>
-        <NavLink>Kontakt</NavLink>
+        {MENU.map((item) => <MenuButton name={item.title} path={item.path} links={item.links}></MenuButton>)}
       </Stack>
     </Bar>
   );
